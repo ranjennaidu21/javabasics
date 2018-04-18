@@ -1,4 +1,4 @@
-package core1;
+package one.basic.stringclass;
 
 public class StringClass {
 

@@ -1,4 +1,4 @@
-package core1;
+package one.basic.variables;
 
 public class Variables {
 
