@@ -1,4 +1,4 @@
-package inheritence4;
+package twelve.inheritence;
 
 //the extends keyword let this class to inherit all the state and methods of the Animal class
 public class Dog extends Animal{
@@ -17,6 +17,8 @@ public class Dog extends Animal{
 		//if you want to add any value specific to this Dog class from the super class constructor , 
 		//then add value to the super class constructor parameter as below :size=50 and weight=50
 		//you dont have to add the size and weight parameter above as it already declared in the super class constructor
+		
+		//super is referring to the class we inherited this class from (Animal)
 		super(category,brain,50,50);
 		//for variables specific to this Dog class
 		this.eyes=eyes;
@@ -28,10 +30,12 @@ public class Dog extends Animal{
 	public void move(){
 		System.out.println("Dog move() called");
 		//you can also call the move method from the super class(Animal) using the super keyword as below
-		//super is referring to the super class of this Class which extended from
-		//you can add super infront if you have same method name and want to call method from the superclass 
-		//instead of move method from this(Dog) class
 		super.move();
+		
+/*		super is referring to the super class of this Class which extended from
+		you can add super infront if you have same method name and want to call method from the superclass 
+		instead of move method from this(Dog) class*/
+
 	}
 	
 	//method specific for this Dog class

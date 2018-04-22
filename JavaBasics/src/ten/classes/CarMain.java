@@ -1,4 +1,4 @@
-package classes2;
+package ten.classes;
 
 public class CarMain {
 
@@ -9,10 +9,11 @@ public class CarMain {
 		        //porsche.model = "Carrera";
 			    
 			    //Need to use setter and getter methods (Encapsulation).
-                porsche.setModel("porsche");
+                porsche.setModel("commodore");
                 System.out.println("Model is " + porsche.getModel());
 		        
 
 	}
 
 }
+

@@ -1,4 +1,4 @@
-package constructors3;
+package eleven.contructors;
 
 public class Account {
 
@@ -9,7 +9,7 @@ public class Account {
 	    private String customerPhoneNumber;
 
 	    public Account() {
-	        this("56789", 2.50, "Default name", "Default address", "default phone");
+	        this("2000", 2.50, "Default name", "Default address", "default phone");
 	        System.out.println("Empty constructor called");
 	    }
 
@@ -24,7 +24,9 @@ public class Account {
 	    }
 
 	    public Account(String customerName, String customerEmailAddress, String customerPhoneNumber) {
-	        this("99999",100.55, customerName, customerEmailAddress, customerPhoneNumber);
+	        //only the name ,email and number is passed so the rest value need to be hardcoded to set default
+	    	//values for that fields and then call the contstructor above which set the value as below.
+	    	this("99999",100.55, customerName, customerEmailAddress, customerPhoneNumber);
 	    }
 
 	    public void deposit(double depositAmount) {

@@ -1,4 +1,5 @@
-package inheritence4;
+package twelve.inheritence;
+/* Inheritence : Allow to inherect common behaviors from other classes*/
 
 public class AnimalMain {
 
@@ -27,6 +28,7 @@ public class AnimalMain {
 		System.out.println();
 		//you can call method declared in superclass using the subclass object as below
 		dog.eat();
+		System.out.println();
 		//Overriding: you can call method declared in superclass but specific to subclass as below:
 		dog.move();
 		

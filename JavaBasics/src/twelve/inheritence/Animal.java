@@ -1,4 +1,4 @@
-package inheritence4;
+package twelve.inheritence;
 
 //super class
 public class Animal {
