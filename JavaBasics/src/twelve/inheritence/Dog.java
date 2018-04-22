@@ -19,7 +19,11 @@ public class Dog extends Animal{
 		//you dont have to add the size and weight parameter above as it already declared in the super class constructor
 		
 		//super is referring to the class we inherited this class from (Animal)
-		super(category,brain,50,50);
+		//constructor can have call to super or this but not both.
+		//super and this cannot be used in static area ()
+		
+		// important : super must be first statement in each constructor
+		super(category,brain,50,50); //super constructor , cannot use this() constructor		
 		//for variables specific to this Dog class
 		this.eyes=eyes;
 		this.tail=tail;
