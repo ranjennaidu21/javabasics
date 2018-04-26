@@ -1,4 +1,4 @@
-package arrays9;
+package sixteen.arrays;
 
 public class Arrays {
 
@@ -7,7 +7,7 @@ public class Arrays {
 		double[] myDoubleArray = new double[2]; //just to show we can create array for other data type also
 		int[] myIntArray = new int[3];
 		//[] added after the datatype, name of the array, new int[3] referring to number of values that can assigned to the array 
-		//starts from 0 (0,1,2) , anything beyond this will give ArrayOutOfBoundExceptions
+		//starts from 0 (0,1,2) , anything beyond this will give ArrayIndexOutOfBoundsException
 		
 		//assigning value to array
 		myIntArray[1] = 2;
@@ -23,7 +23,7 @@ public class Arrays {
 		
 		//the easiet way to declare and assign array value is using for loop as below
 		int[] myIntArray3 = new int[3];
-		//can use myIntArray3.length instead of 3 in the for loop below
+		//can use myIntArray3.length instead of hardcoded value like 3 in the for loop below
 		for(int i=0;i<myIntArray3.length;i++){
 			myIntArray3[i] = i * 2;
 		}	
