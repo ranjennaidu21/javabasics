@@ -37,7 +37,7 @@ public class WhileAndDoWhile {
 			System.out.println("Count for this is: " + count);
 			count++;
 		}while(count<4);
-		
+		//semilcolon is require for the dowhile
 
 		//call the method to check the even method using while loop
 		System.out.println("===Calling IsEven Method===");
