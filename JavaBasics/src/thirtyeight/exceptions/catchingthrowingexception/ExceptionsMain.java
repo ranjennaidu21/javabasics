@@ -4,9 +4,7 @@ import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-/**
- * Created by timbuchalka on 1/04/2016.
- */
+
 public class ExceptionsMain {
 	
 	//now we can use multi catch exception 
