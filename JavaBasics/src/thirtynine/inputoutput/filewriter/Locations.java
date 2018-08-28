@@ -12,8 +12,24 @@ public class Locations implements Map<Integer, Location> {
     private static Map<Integer, Location> locations = new HashMap<Integer, Location>();
     
     //FileWriter to write to a text file
-    public static void main(String[] args) {
-        FileWriter locFile = null;
+    public static void main(String[] args) throws IOException {
+        //using try with resources start from java 7 easier way to avoid messy code below
+    	//as no point to just catching the exception unless you do something about it
+    	//now exception is being thrown/specify rather than catch as below
+    	//now this try with resources ensure the file is closed regardless of code execute
+    	//normally or exception occurs
+        try(FileWriter locFile = new FileWriter("locations.txt")) {
+            for(Location location : locations.values()) {
+                locFile.write(location.getLocationID() + "," + location.getDescription() + "\n");
+            }
+        }
+        
+               
+        //we put this before the try block so that it will be available in the 
+    	//catch and finally block
+        
+/*    	FileWriter locFile = null;
+
         try {
         	//gives a file name
         	//you can see this is written to the folder outside of src path
@@ -43,6 +59,7 @@ public class Locations implements Map<Integer, Location> {
                 e.printStackTrace();
             }
         }
+*/
     }
     
     //store static data for the location map above
