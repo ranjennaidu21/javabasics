@@ -1,5 +1,7 @@
-package thirtynine.inputoutput.basic;
+package thirtynine.inputoutput.filewriter;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -8,6 +10,40 @@ import java.util.Set;
 //locations class that implement the map interface
 public class Locations implements Map<Integer, Location> {
     private static Map<Integer, Location> locations = new HashMap<Integer, Location>();
+    
+    //FileWriter to write to a text file
+    public static void main(String[] args) {
+        FileWriter locFile = null;
+        try {
+        	//gives a file name
+        	//you can see this is written to the folder outside of src path
+        	//eg:C:\Users\ranje\git\javabasics\JavaBasics
+            locFile = new FileWriter("locations.txt");
+            for(Location location : locations.values()) {
+                locFile.write(location.getLocationID() + "," + location.getDescription() + "\n");
+            }
+            //IOException is a checked exception where we cannot ignore it and need
+            //to deal with it otherwise the program wont compile
+        } catch(IOException e) {
+            System.out.println("In catch block");
+            e.printStackTrace();
+        } finally {
+        	//cleanup code must be executed for this no matter what
+        	//finally : the code in this block will be executed no matter what
+        	//can be try and catch or try and finally as  minimum
+            System.out.println("in finally block");
+            try {
+                if(locFile != null) {
+                    System.out.println("Attempting to close locfile");
+                    //if output file is not closed 
+                    //data can be corrupted or file remain lock
+                    locFile.close();
+                }
+            } catch(IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
     
     //store static data for the location map above
     //this static block will be executed once when the locations class is loaded

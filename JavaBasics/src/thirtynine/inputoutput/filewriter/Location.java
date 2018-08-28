@@ -1,4 +1,4 @@
-package thirtynine.inputoutput.basic;
+package thirtynine.inputoutput.filewriter;
 
 import java.io.Serializable;
 import java.util.HashMap;
