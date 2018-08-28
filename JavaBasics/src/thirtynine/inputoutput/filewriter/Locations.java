@@ -18,11 +18,16 @@ public class Locations implements Map<Integer, Location> {
     	//now exception is being thrown/specify rather than catch as below
     	//now this try with resources ensure the file is closed regardless of code execute
     	//normally or exception occurs
-        try(FileWriter locFile = new FileWriter("locations.txt")) {
-            for(Location location : locations.values()) {
-                locFile.write(location.getLocationID() + "," + location.getDescription() + "\n");
+        try(FileWriter locFile = new FileWriter("locations.txt");
+        		//write another file for directions exits for all the locations
+                FileWriter dirFile = new FileWriter("directions.txt")) {
+                for(Location location : locations.values()) {
+                    locFile.write(location.getLocationID() + "," + location.getDescription() + "\n");
+                    for(String direction : location.getExits().keySet()) {
+                        dirFile.write(location.getLocationID() + "," + direction + "," + location.getExits().get(direction) + "\n");
+                    }
+                }
             }
-        }
         
                
         //we put this before the try block so that it will be available in the 
